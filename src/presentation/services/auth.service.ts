@@ -2,7 +2,7 @@ import { UserModel } from '../../data';
 import { LoginUserDto, RegisterUserDto } from '../../domain/dtos/auth/';
 import { CustomError } from '../../domain/errors';
 import { UserEntity } from '../../domain/entities/';
-import { bcryptAdapter } from '../../config';
+import { bcryptAdapter, JwtAdapter } from '../../config';
 export class AuthService {
   constructor() {}
   async registerUser(registerUserDto: RegisterUserDto) {
@@ -33,7 +33,7 @@ export class AuthService {
     const user = await UserModel.findOne({ email: loginUserDto.email });
 
     if (!user) {
-      throw  CustomError.notFound('user not found');
+      throw CustomError.notFound('user not found');
     }
 
     const isMatch = bcryptAdapter.compare(loginUserDto.password, user.password);
@@ -44,6 +44,11 @@ export class AuthService {
 
     const { password, ...userEntity } = UserEntity.fromObject(user);
 
-    return { user: userEntity, token: 'abc' };
+    const token = await JwtAdapter.generateToken({ id: user.id });
+    if (!token) {
+      throw CustomError.internalServerError('Error while generating jwt');
+    }
+
+    return { user: userEntity, token };
   }
 }
