@@ -17,6 +17,11 @@ export class JwtAdapter {
   }
 
   static verifyToken(token: string): any {
-    throw new Error('not implemented');
+    return new Promise((resolve, reject) => {
+      jwt.verify(token, jwt_seed, (err, decoded) => {
+        if (err) return resolve(null);
+        return resolve(decoded);
+      });
+    });
   }
 }
