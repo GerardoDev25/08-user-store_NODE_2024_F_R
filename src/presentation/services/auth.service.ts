@@ -17,13 +17,17 @@ export class AuthService {
 
       user.password = bcryptAdapter.hash(registerUserDto.password);
 
-      // todo generate jwt to auth user
+      const token = await JwtAdapter.generateToken({ id: user.id });
+      if (!token) {
+        throw CustomError.internalServerError('Error while generating jwt');
+      }
+
       // todo send confirmation email
 
       await user.save();
       const { password, ...userEntity } = UserEntity.fromObject(user);
 
-      return { user: { ...userEntity }, token: 'abc' };
+      return { user: { ...userEntity }, token };
     } catch (error) {
       throw CustomError.internalServerError(`${error}`);
     }
