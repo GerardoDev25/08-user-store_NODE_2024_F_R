@@ -42,6 +42,10 @@ export class AuthController {
   };
 
   validateEmail = (req: Request, res: Response) => {
-    res.json('validateEmailUser');
+    const { token } = req.params;
+    res.json(token);
+
+    // this.authService.validateEmail(token).then((user) => res.json(user));
+    
   };
 }
