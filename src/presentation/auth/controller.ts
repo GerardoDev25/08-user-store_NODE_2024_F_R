@@ -46,7 +46,7 @@ export class AuthController {
 
     return this.authService
       .validateEmail(token)
-      .then(() => res.json('email validated'))
+      .then(() => res.json('email was validated properly'))
       .catch((error) => this.handleError(res, error));
   };
 }
