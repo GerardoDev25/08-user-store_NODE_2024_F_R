@@ -1,8 +1,31 @@
+import { CreateCategoryDto } from '../../domain/dtos/category/';
+import { UserEntity } from '../../domain/entities';
+import { CategoryModel } from '../../data/mongo/models/';
+import { CustomError } from '../../domain/errors';
+export class CategoryService {
+  constructor() {}
 
-export class CategoryService{
+  async createCategory(createCategoryDto: CreateCategoryDto, user: UserEntity) {
+    const categoryExists = await CategoryModel.findOne({
+      name: createCategoryDto.name,
+    });
+    if (categoryExists) {
+      throw CustomError.badRequest('Category already exists');
+    }
 
-  constructor(){
-    
+    try {
+      const category = await CategoryModel.create({
+        ...createCategoryDto,
+        user: user.id,
+      });
+
+      await category.save();
+
+      const { id, name, available } = category;
+
+      return { id, name, available };
+    } catch (error) {
+      throw CustomError.internalServerError(`${error}`);
+    }
   }
-  
 }
