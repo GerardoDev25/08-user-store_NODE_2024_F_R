@@ -3,6 +3,7 @@ import { CustomError } from '../../domain/errors';
 import { CategoryService } from '../services/';
 import { CreateCategoryDto } from '../../domain/dtos/category';
 import { UserEntity } from '../../domain/entities';
+import { PaginationDto } from '../../domain/dtos/shered';
 
 export class CategoryController {
   constructor(private readonly categoryService: CategoryService) {}
@@ -29,8 +30,16 @@ export class CategoryController {
   };
 
   public getCategory = async (req: Request, res: Response) => {
+    const { page = 1, limit = 10 } = req.query;
+
+    const [error, paginationDto] = PaginationDto.create(+page, +limit);
+
+    if (error) {
+      return res.status(400).json({ error });
+    }
+
     return this.categoryService
-      .getCategories()
+      .getCategories(paginationDto!)
       .then((categories) => res.status(200).json(categories))
       .catch((error) => this.handleError(res, error));
   };
