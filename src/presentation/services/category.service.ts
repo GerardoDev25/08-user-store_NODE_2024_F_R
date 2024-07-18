@@ -28,4 +28,19 @@ export class CategoryService {
       throw CustomError.internalServerError(`${error}`);
     }
   }
+
+  async getCategories() {
+    try {
+      const categories = await CategoryModel.find();
+
+      const categoriesMapped = categories.map((category) => {
+        const { id, name, available } = category;
+        return { id, name, available };
+      });
+
+      return categoriesMapped;
+    } catch (error) {
+      throw CustomError.internalServerError(`internal server error`);
+    }
+  }
 }
