@@ -2,7 +2,6 @@ import { Request, Response } from 'express';
 import { CustomError } from '../../domain/errors';
 import { CategoryService } from '../services/';
 import { CreateCategoryDto } from '../../domain/dtos/category';
-import { UserEntity } from '../../domain/entities';
 import { PaginationDto } from '../../domain/dtos/shered';
 
 export class CategoryController {

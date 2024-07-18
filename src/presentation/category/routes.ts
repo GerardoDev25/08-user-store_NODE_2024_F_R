@@ -7,16 +7,12 @@ export class CategoryRoutes {
   static get routes(): Router {
     const router = Router();
 
-    const categoryService = new CategoryService();
-    const categoryController = new CategoryController(categoryService);
+    const service = new CategoryService();
+    const controller = new CategoryController(service);
 
-    router.get('/', categoryController.getCategory);
+    router.get('/', controller.getCategory);
 
-    router.post(
-      '/',
-      [AuthMiddleware.validateJwt],
-      categoryController.createCategory
-    );
+    router.post('/', [AuthMiddleware.validateJwt], controller.createCategory);
 
     return router;
   }
