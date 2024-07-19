@@ -64,154 +64,154 @@ export const seedData = {
       name: 'Than',
       available: true,
       price: 75.0369,
-      descripcion:
+      description:
         'daughter me move thumb claws lose supper strip animal teach additional definition why pitch help thus boy like every mud month are account dozen',
     },
     {
       name: 'Wagon',
       available: true,
       price: 1.9631,
-      descripcion:
+      description:
         'actual difficult nature yellow smile captain nervous to cause wolf strong neck fifteen wrote consider visit likely happened rear red review wash flag parent',
     },
     {
       name: 'Tone',
       available: true,
       price: 11.0312,
-      descripcion:
+      description:
         'met certain specific detail deeply red forth tiny whatever what image parts deer difficulty pair mixture trouble forgotten fort dry listen strength got seldom',
     },
     {
       name: 'Song',
       available: true,
       price: 99.2314,
-      descripcion:
+      description:
         'look board flat river solve spite universe history use pool frequently twenty basic lying this came poetry particular function previous suit west shore tomorrow',
     },
     {
       name: 'Plenty',
       available: true,
       price: 75.4476,
-      descripcion:
+      description:
         'dinner welcome screen expression structure plastic doubt missing thank garage property particular park syllable slide cup alphabet swimming stood fought fog shut spite ever',
     },
     {
       name: 'Season',
       available: false,
       price: 91.6254,
-      descripcion:
+      description:
         'canal promised split headed studying had declared vessels hello matter lovely congress birthday fed word street happened ought cold heavy cage shoulder sight applied',
     },
     {
       name: 'Voyage',
       available: true,
       price: 84.0274,
-      descripcion:
+      description:
         'reach myself owner building anyway tool dance particles branch shadow clear home of grass rabbit wind bit barn slipped husband recent tongue important zero',
     },
     {
       name: 'Medicine',
       available: true,
       price: 38.1478,
-      descripcion:
+      description:
         'mountain five art moving foot roll harder lucky pitch mile nails married finally spend adult left storm easy cry increase cook drew announced glad',
     },
     {
       name: 'How',
       available: true,
       price: 47.5355,
-      descripcion:
+      description:
         'heat student highway very word health them feel off cover trail cage went mission ice safety disease observe copy flat speech experiment now finest',
     },
     {
       name: 'Saved',
       available: true,
       price: 75.9318,
-      descripcion:
+      description:
         'weather mud friend brother breakfast corn prevent numeral deer quiet so name fastened tongue sing phrase concerned tree pass flies fighting chapter fence act',
     },
     {
       name: 'High',
       available: true,
       price: 90.1331,
-      descripcion:
+      description:
         'went split establish speak origin itself news when cross stand value vertical decide bicycle tone are market view depth income touch above nation spread',
     },
     {
       name: 'Colony',
       available: true,
       price: 27.3687,
-      descripcion:
+      description:
         'jungle weight whether printed west egg run cut rod football fewer trouble hearing him been note select our shelf afraid jump alike slip shore',
     },
     {
       name: 'Dozen',
       available: false,
       price: 63.9702,
-      descripcion:
+      description:
         'tobacco spent congress who accept pond outline changing flow find cat mirror tax keep twenty yellow into pile reach move plan recall nervous gold',
     },
     {
       name: 'Bean',
       available: true,
       price: 44.1797,
-      descripcion:
+      description:
         'direct might am golden block seat birth television taught twenty clock process safety shirt guard control cent follow couple eleven weather location turn parent',
     },
     {
       name: 'Pain',
       available: true,
       price: 74.0199,
-      descripcion:
+      description:
         'start difficult two force source job process tomorrow machinery physical loose five fruit leaving century ourselves difference for frog throughout bridge atomic sunlight send',
     },
     {
       name: 'Clearly',
       available: true,
       price: 8.6356,
-      descripcion:
+      description:
         'well poem little but therefore instant tight outline foreign drove characteristic mine leader cold close club satellites quiet face tobacco age gas bend push',
     },
     {
       name: 'Immediately',
       available: true,
       price: 41.4278,
-      descripcion:
+      description:
         'feel shot fill square caught would valley path whispered come porch function pocket fish division think same sign was adventure worry bean wealth realize',
     },
     {
       name: 'Sent',
       available: false,
       price: 95.3915,
-      descripcion:
+      description:
         'shut cookies goes serious several change poet principle play congress begun mill composition unless piece negative expect ancient milk shall house period stranger eight',
     },
     {
       name: 'Globe',
       available: true,
       price: 32.7184,
-      descripcion:
+      description:
         'saw clean golden brick shot brave percent damage eight chain young tears religious stems speak element example eager busy satellites pain fast operation person',
     },
     {
       name: 'Battle',
       available: true,
       price: 53.4763,
-      descripcion:
+      description:
         'his prevent sight camera ring generally glad refused among group nervous cave box rate breath somehow whether gate plant related citizen even yellow after',
     },
     {
       name: 'Elephant',
       available: true,
       price: 42.5209,
-      descripcion:
+      description:
         'ocean pink smell cent globe shot trouble guard troops swing sat hat back softly smaller direction seen jar strike union language off cookies serious',
     },
     {
       name: 'Special',
       available: true,
       price: 85.0522,
-      descripcion:
+      description:
         'slip front wrapped corner rose audience eat consider manufacturing swept seven yard sing purple industrial picture carbon social pole deal vowel slipped truck dozen',
     },
   ],
