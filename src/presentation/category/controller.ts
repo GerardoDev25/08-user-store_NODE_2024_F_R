@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { CustomError } from '../../domain/errors';
 import { CategoryService } from '../services/';
 import { CreateCategoryDto } from '../../domain/dtos/category';
-import { PaginationDto } from '../../domain/dtos/shered';
+import { PaginationDto } from '../../domain/dtos/shared';
 
 export class CategoryController {
   constructor(private readonly categoryService: CategoryService) {}

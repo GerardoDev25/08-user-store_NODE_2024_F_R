@@ -2,7 +2,7 @@ import { CreateCategoryDto } from '../../domain/dtos/category/';
 import { UserEntity } from '../../domain/entities';
 import { CategoryModel } from '../../data/mongo/models/';
 import { CustomError } from '../../domain/errors';
-import { PaginationDto } from '../../domain/dtos/shered';
+import { PaginationDto } from '../../domain/dtos/shared';
 export class CategoryService {
   constructor() {}
 
